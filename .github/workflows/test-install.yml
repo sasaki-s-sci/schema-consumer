@@ -1,0 +1,27 @@
+name: Test Private Package Install
+
+on:
+    push:
+        branches:
+            - basic-codes
+    workflow_dispatch:
+
+jobs:
+    test-install:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v4
+
+            - uses: actions/setup-node@v4
+              with:
+                  node-version-file: ".nvmrc"
+                  registry-url: "https://npm.pkg.github.com"
+
+            - name: Install and run
+              working-directory: ./schema-consumer
+              run: |
+                  npm install
+                  npx tsx src/main.ts
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
