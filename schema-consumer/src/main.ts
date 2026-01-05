@@ -5,3 +5,4 @@ const schemaSample: SchemaSample = {
     value: 0,
 };
 const main = () => testFunction();
+main();
