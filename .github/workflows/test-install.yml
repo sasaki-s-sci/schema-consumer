@@ -27,4 +27,4 @@ jobs:
                   npm install
                   npx tsx src/main.ts
               env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  GITHUB_TOKEN: ${{ secrets.PKG_TOKEN }}
