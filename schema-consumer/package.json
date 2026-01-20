@@ -8,7 +8,7 @@
     "license": "ISC",
     "type": "module",
     "dependencies": {
-        "@sasaki-s-sci/schema-provider": "0.0.20260106124024"
+        "@sasaki-s-sci/schema-provider": "0.0.20260120024534"
     },
     "devDependencies": {
         "typescript": "^5.9.3"
